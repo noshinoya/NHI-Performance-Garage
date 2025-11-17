@@ -1,0 +1,530 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* bar navigasi */
+
+.bar-atas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff2121;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+}
+
+.bar-atas a {
+  text-decoration: none;
+}
+
+.gambardanlogo .logobengkel {
+  width: 40%;
+  height: 40%;
+}
+
+.gambardanlogo .namabengkel {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: 900;
+}
+
+.gambardanlogo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 400px;
+}
+
+nav ul {
+  display: inline-flex;
+  list-style: none;
+  margin-right: 50px;
+}
+
+nav ul li a {
+  font-family: "Work Sans", Sans-serif;
+  text-decoration: none;
+  color: white;
+}
+
+ul li {
+  text-align: center;
+  margin: 15px;
+  font-weight: 700;
+  position: relative;
+}
+
+header li::after,
+header li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, white, #1e93ab);
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.9s ease-out;
+}
+
+header li::after {
+  bottom: -5px;
+  transform-origin: right;
+}
+
+header li::before {
+  top: -5px;
+  transform-origin: left;
+}
+
+header li:hover::after,
+header li:hover::before {
+  transform: scaleX(1);
+}
+
+.ddaboutus,
+.ddservices {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+  position: fixed;
+  z-index: 1000;
+  background-color: white;
+  padding: 3px 0;
+  min-width: 200px;
+  border-radius: 3px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.7);
+  margin-top: 10px;
+  display: block;
+}
+
+.ddaboutus {
+  right: 390px;
+}
+
+.ddservices {
+  right: 330px;
+}
+
+.navigasi ul li:hover > .ddaboutus,
+.navigasi ul li:hover > .ddservices {
+  opacity: 1;
+  visibility: visible;
+}
+
+.ddaboutus li::after,
+.ddaboutus li::before,
+.ddservices li::after,
+.ddservices li::before {
+  display: none !important;
+}
+
+.ddaboutus li,
+.ddservices li {
+  margin: 0 !important;
+  list-style: none;
+  padding: 10px 15px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ddaboutus li a,
+.ddservices li a {
+  color: black !important;
+  text-decoration: none;
+}
+
+.ddaboutus li:not(:last-child),
+.ddservices li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+/* isi halaman halaman home - affiliate */
+
+/* bagian bagian div, section */
+.divs {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+section {
+  padding: 40px 20px;
+  align-items: center;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #ff2121;
+}
+
+section p {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* css bagian halaman2nya */
+/* home */
+.pghome {
+  background-color: #ffc7c7;
+  text-align: center;
+  padding: 80px 50px;
+}
+
+.pghome h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #ff2121;
+}
+
+.pghome p {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.pghome button {
+  background-color: #ff2121;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pghome button:hover {
+  background-color: #ae1f1f;
+}
+
+/* about us */
+.pgaboutus {
+  display: block;
+  padding: 60px 10%;
+  background-color: #ffffff;
+  padding-bottom: 0px;
+}
+
+.judulaboutus {
+  text-align: center;
+  font-size: 37px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #ff2121;
+}
+
+/* penghargaan */
+.pgpenghargaan {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+.penghargaankiri {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.imgpenghargaan {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  object-fit: contain;
+}
+
+.penghargaankanan {
+  width: 100%;
+  height: max-content;
+  align-items: center;
+  margin: auto;
+}
+
+.penghargaankanan h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #141414;
+}
+
+.penghargaankanan p {
+  text-align: justify;
+  color: #242424;
+}
+
+.penghargaankanan b {
+  color: #111111;
+}
+
+.misi {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.pgtesti {
+  margin-top: 40px;
+  gap: 20px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.testi {
+  display: inline-flex;
+  gap: 30px;
+}
+
+.pgtesti h3 {
+  text-align: center;
+  font-size: 24px;
+}
+
+.testi .kiri {
+  flex-direction: row;
+}
+
+.testi .kanan {
+  flex-direction: row;
+}
+
+.testi-text {
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #444;
+}
+
+.kiri .testi-text {
+  text-align: left;
+  margin: auto;
+}
+
+.kanan .testi-text {
+  text-align: right;
+  margin: auto;
+}
+
+.testi-img {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* services */
+#services {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+#services .divs {
+  margin: 10px auto;
+  align-items: center;
+  text-align: center;
+}
+
+#services h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.servicesgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  margin: 40px auto;
+}
+
+.servicecard {
+  background-color: #ffd9d9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  border: 2px solid #ff2121;
+  width: 100%;
+}
+
+.servicecard h3 {
+  color: #ff2121;
+  margin-bottom: 15px;
+}
+
+.servicecard ul li {
+  position: static;
+  display: block;
+  color: #333;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+.servicecard .harga {
+  font-weight: 600;
+  color: #202020;
+  margin-top: 10px;
+}
+
+/* Lokasi */
+.pgourlocation {
+  background-color: #fceeee;
+}
+
+.locationgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.locationcard {
+  background-color: #ffd9d9;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.locationcard h3 {
+  color: #ff2121;
+  margin-bottom: 20px;
+}
+
+.locationcard p {
+  color: #333;
+}
+
+/* contact us */
+#contact {
+  background-color: #f9f9f9;
+}
+
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #ff2121;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #ff2121;
+}
+
+/* affiliate */
+.pgaffiliate {
+  background-color: #f8f8f8;
+}
+
+#formAffiliate {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+#formAffiliate h3 {
+  text-align: center;
+  color: #ff2121;
+  margin-bottom: 20px;
+}
+
+/* footer */
+.footer {
+  background-image: url("fotobengkel.jpg");
+  background-size: cover !important ;
+  box-sizing: border-box;
+  display: block;
+}
+
+.footer .divs {
+  display: flex;
+}
+
+.descfooter {
+  display: flex;
+  width: 90%;
+}
+
+.bagianscmedia {
+  margin: auto;
+  gap: 10px;
+  margin-left: 60px;
+}
+
+.scmediatxt {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer ul li {
+  list-style: none;
+}
+
+.logobengkelfoot {
+  height: 20%;
+  width: 20%;
+  object-fit: contain;
+}
+
+.descripsibengkelfooter {
+  text-align: justify;
+  font-size: 20px;
+}
+
+.logofb,
+.logoig {
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+footer p {
+  margin: 5px 0;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.copyright p {
+  margin: 5px 0;
+  font-size: 14px;
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  text-align: center;
+}
